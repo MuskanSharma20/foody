@@ -12,14 +12,14 @@
         <div class="text-2xl flex-grow">Logo</div>
       <div id="menu" class="menu elts md:static md:min-h-fit absolute min-h-[50vh] left-0 flex items-center justify-center w-full top-14 z-10 bg-slate-100 md:flex-grow-0 md:flex md:justify-center hidden md:flex transition-all duration-700 transform ">
             <ul class="md:flex-row flex flex-col gap-8 font-bold text-2xl md:text-lg md:flex md:gap-4">
-                <li class="mx-2 cursor-pointer"><a href="home.html">Home</a></li>
-                <li class="mx-2 cursor-pointer"><a href="menu.html">Menu</a></li>
+                <li class="mx-2 cursor-pointer"><a href="home.php">Home</a></li>
+                <li class="mx-2 cursor-pointer"><a href="menu.php">Menu</a></li>
                 <li class="mx-2 cursor-pointer">Contact us</li>
-                <li class="mx-2 cursor-pointer"><a href="order.html">Order</a></li>
+                <li class="mx-2 cursor-pointer"><a href="order.php">Order</a></li>
             </ul>
         </div>
         <div class="flex gap-4 justify-center items-center md:flex-grow-0">
-          <button class="bg-orange-500 text-white px-4 py-2 rounded md:ml-auto hover:bg-orange-600"><a href="signup.html">Signup</a></button>
+          <button class="bg-orange-500 text-white px-4 py-2 rounded md:ml-auto hover:bg-orange-600"><a href="signup.php">Signup</a></button>
             <a onclick="onToggleMenu()" class="md:hidden cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 open-icon">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
