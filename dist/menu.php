@@ -352,15 +352,11 @@
 </section>
 
 
-
-    <!-- Sticky Cart -->
-     <!-- <section class="">
-        <div class="w-full fixed bottom-0 flex justify-center item-centre px-8 max-w-7xl  md:px-5 lg:px-2">
-            <button class="bg-orange-500 hover:bg-slate-400 text-white px-6 py-2 w-full rounded-md shadow-md">
-                Order Now
-            </button>
-        </div>
-     </section> -->
+<!-- //sticky btn  -->
+<button id="sticky-button" class="fixed bottom-0 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 w-full max-w-4xl">
+        Order Now
+    </button>
+    
    
 
   
