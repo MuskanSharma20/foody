@@ -164,7 +164,7 @@
                                     <path d="M4.5 9H13.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <input type="text" value="2" class="quantity w-10 text-center border rounded-full bg-gray-100">
+                            <input type="text" value="0" class="quantity w-10 text-center border rounded-full bg-gray-100">
                             <button class="increment p-2 border rounded-full hover:bg-gray-200">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-gray-900">
                                     <path d="M9 4.5V13.5M4.5 9H13.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -194,7 +194,7 @@
                                     <path d="M4.5 9H13.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <input type="text" value="2" class="quantity w-10 text-center border rounded-full bg-gray-100">
+                            <input type="text" value="0" class="quantity w-10 text-center border rounded-full bg-gray-100">
                             <button class="increment p-2 border rounded-full hover:bg-gray-200">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-gray-900">
                                     <path d="M9 4.5V13.5M4.5 9H13.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -227,7 +227,7 @@
                                     <path d="M4.5 9H13.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <input type="text" value="2" class="quantity w-10 text-center border rounded-full bg-gray-100">
+                            <input type="text" value="0" class="quantity w-10 text-center border rounded-full bg-gray-100">
                             <button class="increment p-2 border rounded-full hover:bg-gray-200">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-gray-900">
                                     <path d="M9 4.5V13.5M4.5 9H13.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -257,7 +257,7 @@
                                     <path d="M4.5 9H13.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
-                            <input type="text" value="2" class="quantity w-10 text-center border rounded-full bg-gray-100">
+                            <input type="text" value="0" class="quantity w-10 text-center border rounded-full bg-gray-100">
                             <button class="increment p-2 border rounded-full hover:bg-gray-200">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-gray-900">
                                     <path d="M9 4.5V13.5M4.5 9H13.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
