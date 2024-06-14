@@ -32,37 +32,40 @@
     </nav>
 </header>
 
-
-   <!-- carousel -->
-   <section class="w-full px-4">
+<!-- carousel -->
+<!-- carousel -->
+<section class="w-full px-4">
   <div class="relative mx-auto lg:max-w-7xl">
     <!-- Carousel Wrapper -->
     <div id="carousel" class="overflow-hidden relative lg:h-[91vh]">
       <!-- Carousel Items -->
-      <div class="carousel-item flex justify-center items-center w-full h-full object-cover transition-transform duration-500 ease-in-out">
-        <img src="https://images.unsplash.com/photo-1576521529275-f0f0d02a93b6?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 1">
+      <div class="carousel-item absolute inset-0 flex justify-center items-center opacity-200 transition-all  duration-500 ease-in-out">
+        <img src="https://images.unsplash.com/photo-1576521529275-f0f0d02a93b6?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 1" class="w-full h-full object-cover">
       </div>
-      <div class="carousel-item hidden duration-200 ease-linear">
-        <img src="https://images.unsplash.com/photo-1668236534990-73c4ed23043c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 2">
+      <div class="carousel-item absolute inset-0 flex justify-center items-center opacity-0 transition-opacity duration-500 ease-in-out">
+        <img src="https://images.unsplash.com/photo-1668236534990-73c4ed23043c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 2" class="w-full h-full object-cover">
       </div>
-      <div class="carousel-item hidden duration-200 ease-linear">
-        <img src="https://plus.unsplash.com/premium_photo-1695035006524-ed99577324aa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 3">
+      <div class="carousel-item absolute inset-0 flex justify-center items-center opacity-0 transition-opacity duration-500 ease-in-out">
+        <img src="https://plus.unsplash.com/premium_photo-1695035006524-ed99577324aa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 3" class="w-full h-full object-cover">
       </div>
     </div>
-
     <!-- Next & Prev Buttons -->
-    <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 text-white">
+    <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 text-white bg-black bg-opacity-50">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
       </svg>
     </button>
-    <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 text-white">
+    <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 text-white bg-black bg-opacity-50">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
       </svg>
     </button>
   </div>
 </section>
+
+
+
+
 
 
 
@@ -273,7 +276,7 @@
 
 
 
-<script src="home.js"></script>
+<script src="./home.js"></script>
     
 </body>
 </html>

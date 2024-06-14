@@ -18,55 +18,62 @@ function onToggleMenu() {
     }
   }
   
-  
   //carousel
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    let currentIndex = 0;
+    const intervalTime = 5000; // 5seconds
+    let interval;
   
-  document.addEventListener("DOMContentLoaded", function() {
-    const prevButton = document.getElementById('prev');
-    const nextButton = document.getElementById('next');
-    const carousel = document.getElementById('carousel');
-    const slides = carousel.querySelectorAll('.carousel-item');
-    let currentSlide = 0;
-
-    // Function to move to the next slide
-    function moveToNextSlide() {
-      if (currentSlide < slides.length - 1) {
-        currentSlide++;
-      } else {
-        currentSlide = 0;
-      }
-      updateCarousel();
+    // Function to show the next image
+    function showNextImage() {
+      const currentItem = carouselItems[currentIndex];
+      currentIndex = (currentIndex + 1) % carouselItems.length;
+      const nextItem = carouselItems[currentIndex];
+  
+      currentItem.classList.remove('opacity-100');
+      currentItem.classList.add('opacity-0');
+      nextItem.classList.remove('opacity-0');
+      nextItem.classList.add('opacity-100');
     }
-
-    // Function to move to the previous slide
-    function moveToPrevSlide() {
-      if (currentSlide > 0) {
-        currentSlide--;
-      } else {
-        currentSlide = slides.length - 1;
-      }
-      updateCarousel();
+  
+    // Function to show the previous image
+    function showPrevImage() {
+      const currentItem = carouselItems[currentIndex];
+      currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+      const prevItem = carouselItems[currentIndex];
+  
+      currentItem.classList.remove('opacity-100');
+      currentItem.classList.add('opacity-0');
+      prevItem.classList.remove('opacity-0');
+      prevItem.classList.add('opacity-100');
     }
-
-    // Function to update carousel display based on currentSlide
-    function updateCarousel() {
-      slides.forEach((slide, index) => {
-        if (index === currentSlide) {
-          slide.classList.remove('hidden');
-          slide.classList.add('block');
-        } else {
-          slide.classList.add('hidden');
-          slide.classList.remove('block');
-        }
-      });
+  
+    // Function to start the slider
+    function startSlider() {
+      interval = setInterval(showNextImage, intervalTime);
     }
-
-    // Event listeners for previous and next buttons
-    prevButton.addEventListener('click', moveToPrevSlide);
-    nextButton.addEventListener('click', moveToNextSlide);
+  
+    // Add event listeners for buttons
+    document.getElementById('next').addEventListener('click', () => {
+      clearInterval(interval);
+      showNextImage();
+      startSlider();
+    });
+  
+    document.getElementById('prev').addEventListener('click', () => {
+      clearInterval(interval);
+      showPrevImage();
+      startSlider();
+    });
+  
+    // Start the slider
+    startSlider();
   });
-  
-  
+
+
+
   
   
   // image slider

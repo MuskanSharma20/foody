@@ -19,6 +19,8 @@ function onToggleMenu() {
   }
   
 
+
+
 //coupon slider 
 document.addEventListener('DOMContentLoaded', function() {
     const prevBtn = document.getElementById('coupon-prev-btn');
