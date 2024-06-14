@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //add to cartt 
 document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.card');
-    
+
     cards.forEach(card => {
         const decrementButton = card.querySelector('.decrement');
         const incrementButton = card.querySelector('.increment');
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         decrementButton.addEventListener('click', function () {
             let quantity = parseInt(quantityInput.value);
-            if (quantity > 1) {
+            if (quantity > 0) {  
                 quantityInput.value = quantity - 1;
             }
         });
@@ -118,11 +118,9 @@ document.addEventListener('DOMContentLoaded', function () {
             };
 
             console.log(JSON.stringify(cartItem));
-           
         });
     });
 });
-
 
 //  slider cards
 document.addEventListener('DOMContentLoaded', function () {
@@ -183,4 +181,6 @@ document.addEventListener('DOMContentLoaded', function () {
         updateButtonState();
     });
 });
+
+
 
