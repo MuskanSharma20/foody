@@ -136,7 +136,7 @@
               </div>
               <div class="flex justify-between items-center">
                   <span class="text-gray-800 font-bold">$20 for two</span>
-                  <button class="text-white bg-orange-500 px-4 py-2 rounded-full hover:bg-orange-600"><a href="menu.html">Order</a></button>
+                  <button class="text-white bg-orange-500 px-4 py-2 rounded-full hover:bg-orange-600"><a href="menu.php">Order</a></button>
                 </div>
           </div>
       </div>
@@ -153,7 +153,7 @@
             </div>
             <div class="flex justify-between items-center">
                 <span class="text-gray-800 font-bold">$20 for two</span>
-                <button class="text-white bg-orange-500 px-4 py-2 rounded-full hover:bg-orange-600"><a href="menu.html">Order</a></button>
+                <button class="text-white bg-orange-500 px-4 py-2 rounded-full hover:bg-orange-600"><a href="menu.php">Order</a></button>
             </div>
         </div>
     </div>
@@ -170,7 +170,7 @@
             </div>
             <div class="flex justify-between items-center">
                 <span class="text-gray-800 font-bold">$20 for two</span>
-                <button class="text-white bg-orange-500 px-4 py-2 rounded-full hover:bg-orange-600"><a href="menu.html">Order</a></button>
+                <button class="text-white bg-orange-500 px-4 py-2 rounded-full hover:bg-orange-600"><a href="menu.php">Order</a></button>
             </div>
         </div>
     </div>
