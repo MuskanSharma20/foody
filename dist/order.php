@@ -9,14 +9,14 @@
 </head>
 
 <body>
-    <header class="px-4">
+<header class="px-4">
         <nav class="w-full bg-slate-100 h-16 flex items-center justify-between px-4 md:px-6 shadow-xl lg:max-w-7xl mx-auto">
             <div class="text-2xl flex-grow">Logo</div>
           <div id="menu" class="menu elts md:static md:min-h-fit absolute min-h-[50vh] left-0 flex items-center justify-center w-full top-14 z-10 bg-slate-100 md:flex-grow-0 md:flex md:justify-center hidden md:flex transition-all duration-700 transform ">
                 <ul class="md:flex-row flex flex-col gap-8 font-bold text-2xl md:text-lg md:flex md:gap-4">
                     <li class="mx-2 cursor-pointer"><a href="home.php">Home</a></li>
                     <li class="mx-2 cursor-pointer"><a href="menu.php">Menu</a></li>
-                    <li class="mx-2 cursor-pointer">Contact us</li>
+                    <li class="mx-2 cursor-pointer"><a href="profilepage.php">Profile</a></li>
                     <li class="mx-2 cursor-pointer"><a href="order.php">Order</a></li>
                 </ul>
             </div>
@@ -133,11 +133,9 @@
         </div>
   
 </div>
-
-
 </div>
-
 </section>
+
 
     <!-- recommended section -->
     <section class="py-6 px-4">

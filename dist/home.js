@@ -20,59 +20,77 @@ function onToggleMenu() {
   
   //carousel
 
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    let currentIndex = 0;
-    const intervalTime = 5000; // 5seconds
-    let interval;
-  
-    // Function to show the next image
-    function showNextImage() {
-      const currentItem = carouselItems[currentIndex];
-      currentIndex = (currentIndex + 1) % carouselItems.length;
-      const nextItem = carouselItems[currentIndex];
-  
-      currentItem.classList.remove('opacity-100');
-      currentItem.classList.add('opacity-0');
-      nextItem.classList.remove('opacity-0');
-      nextItem.classList.add('opacity-100');
-    }
-  
-    // Function to show the previous image
-    function showPrevImage() {
-      const currentItem = carouselItems[currentIndex];
-      currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-      const prevItem = carouselItems[currentIndex];
-  
-      currentItem.classList.remove('opacity-100');
-      currentItem.classList.add('opacity-0');
-      prevItem.classList.remove('opacity-0');
-      prevItem.classList.add('opacity-100');
-    }
-  
-    // Function to start the slider
-    function startSlider() {
-      interval = setInterval(showNextImage, intervalTime);
-    }
-  
-    // Add event listeners for buttons
-    document.getElementById('next').addEventListener('click', () => {
-      clearInterval(interval);
-      showNextImage();
-      startSlider();
-    });
-  
-    document.getElementById('prev').addEventListener('click', () => {
-      clearInterval(interval);
-      showPrevImage();
-      startSlider();
-    });
-  
-    // Start the slider
-    startSlider();
-  });
+const slides = [
+  {
+      url: 'https://www.cookforindia.com/wp-content/uploads/2015/12/chole-bhature-cover.jpg',
+  },
+  {
+      url: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+  {
+      url: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+  {
+      url: 'https://images.unsplash.com/photo-1615837197154-2e801f4bd294?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+  {
+      url: 'https://images.unsplash.com/photo-1619535860434-ba1d8fa12536?q=80&w=1796&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  },
+];
 
+let currentIndex = 0;
 
+const slider = document.getElementById('slider');
+const prevSlideButton = document.getElementById('prevSlide');
+const nextSlideButton = document.getElementById('nextSlide');
+const dotsContainer = document.getElementById('dots');
+
+const updateSlide = () => {
+    slider.style.backgroundImage = `url(${slides[currentIndex].url})`;
+    updateDots();
+};
+
+const prevSlide = () => {
+    currentIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+    updateSlide();
+};
+
+const nextSlide = () => {
+    currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+    updateSlide();
+};
+
+const goToSlide = (slideIndex) => {
+    currentIndex = slideIndex;
+    updateSlide();
+};
+
+const updateDots = () => {
+    const dots = dotsContainer.children;
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove('active');
+    }
+    dots[currentIndex].classList.add('active');
+};
+
+slides.forEach((slide, slideIndex) => {
+    const dot = document.createElement('div');
+    dot.className = 'text-2xl cursor-pointer';
+  
+    dot.onclick = () => goToSlide(slideIndex);
+    dotsContainer.appendChild(dot);
+});
+
+prevSlideButton.onclick = prevSlide;
+nextSlideButton.onclick = nextSlide;
+
+// Initialize the first slide
+updateSlide();
+
+// Add automatic slide change
+setInterval(nextSlide, 5000); // 5000ms = 5s
+ 
+  
 
   
   
