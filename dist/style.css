@@ -782,6 +782,10 @@ video {
   height: 100%;
 }
 
+.h-\[380px\] {
+  height: 380px;
+}
+
 .min-h-\[50vh\] {
   min-height: 50vh;
 }
@@ -1115,6 +1119,11 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .text-center {
@@ -1518,6 +1527,10 @@ video {
     height: 800px;
   }
 
+  .lg\:h-\[650px\] {
+    height: 650px;
+  }
+
   .lg\:w-1\/6 {
     width: 16.666667%;
   }
@@ -1532,6 +1545,10 @@ video {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:bg-cover {
+    background-size: cover;
   }
 
   .lg\:px-0 {

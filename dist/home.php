@@ -36,19 +36,18 @@
 
 
 <!-- //carousel  -->
-<div class="max-w-7xl h-[580px] lg:h-[800px] w-full m-auto py-16 px-4 relative group">
-  <div id="slider" class="w-full h-full rounded-2xl bg-center bg-cover object-cover duration-500"></div>
+<div class="max-w-7xl h-[380px] lg:h-[650px] w-full m-auto py-8 px-4 relative group">
+  <div id="slider" class="w-full h-full rounded-2xl bg-center lg:bg-cover object-cover bg-cover duration-500"></div>
   <!-- Left Arrow -->
-  <div id="prevSlide" class="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-60%] left-5 text-2xl rounded-full p-2 bg-black/5 text-white cursor-pointer">
+  <div id="prevSlide" class="hidden group-hover:block absolute top-1/2 -translate-x-0 -translate-y-1/2 left-5 text-2xl rounded-full p-2 bg-black/5 text-white cursor-pointer">
       &#10094;
   </div>
   <!-- Right Arrow -->
-  <div id="nextSlide" class="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-60%] right-5 text-2xl rounded-full p-2 bg-black/5 text-white cursor-pointer">
+  <div id="nextSlide" class="hidden group-hover:block absolute top-1/2 -translate-x-0 -translate-y-1/2 right-5 text-2xl rounded-full p-2 bg-black/5 text-white cursor-pointer">
       &#10095;
   </div>
   <div id="dots" class="flex top-4 justify-center py-2"></div>
 </div>
-
 
 
 <!-- image slider -->
