@@ -1531,6 +1531,10 @@ video {
     height: 650px;
   }
 
+  .lg\:h-\[670px\] {
+    height: 670px;
+  }
+
   .lg\:w-1\/6 {
     width: 16.666667%;
   }
