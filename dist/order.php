@@ -9,30 +9,32 @@
 </head>
 
 <body>
+    
 <header class="px-4">
-        <nav class="w-full bg-slate-100 h-16 flex items-center justify-between px-4 md:px-6 shadow-xl lg:max-w-7xl mx-auto">
-            <div class="text-2xl flex-grow">Logo</div>
-          <div id="menu" class="menu elts md:static md:min-h-fit absolute min-h-[50vh] left-0 flex items-center justify-center w-full top-14 z-10 bg-slate-100 md:flex-grow-0 md:flex md:justify-center hidden md:flex transition-all duration-700 transform ">
-                <ul class="md:flex-row flex flex-col gap-8 font-bold text-2xl md:text-lg md:flex md:gap-4">
-                    <li class="mx-2 cursor-pointer"><a href="home.php">Home</a></li>
-                    <li class="mx-2 cursor-pointer"><a href="menu.php">Menu</a></li>
-                    <li class="mx-2 cursor-pointer"><a href="profilepage.php">Profile</a></li>
-                    <li class="mx-2 cursor-pointer"><a href="order.php">Order</a></li>
-                </ul>
-            </div>
-            <div class="flex gap-4 justify-center items-center md:flex-grow-0">
-              <button class="bg-orange-500 text-white px-4 py-2 rounded md:ml-auto hover:bg-orange-600"><a href="signup.php">Signup</a></button>
-                <a onclick="onToggleMenu()" class="md:hidden cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 open-icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 close-icon hidden">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
-                </a>
-            </div>
-        </nav>
-    </header>
+    <nav class="w-full bg-slate-100 h-16 flex items-center justify-between px-4 md:px-6 shadow-xl lg:max-w-7xl mx-auto">
+        <div class="text-2xl flex-grow">Logo</div>
+      <div id="menu" class="menu elts md:static md:min-h-fit absolute min-h-[50vh] left-0 flex items-center justify-center w-full top-14 z-10 bg-slate-100 md:flex-grow-0 md:flex md:justify-center hidden md:flex transition-all duration-700 transform ">
+            <ul class="md:flex-row flex flex-col gap-8 font-bold text-2xl md:text-lg md:flex md:gap-4">
+                <li class="mx-2 cursor-pointer"><a href="home.php">Home</a></li>
+                <li class="mx-2 cursor-pointer"><a href="menu.php">Menu</a></li>
+                <li class="mx-2 cursor-pointer"><a href="profile.php">Profile</a></li>
+                <li class="mx-2 cursor-pointer"><a href="order.php">Order</a></li>
+            </ul>
+        </div>
+        <div class="flex gap-4 justify-center items-center md:flex-grow-0">
+          <button class="bg-orange-500 text-white px-4 py-2 rounded md:ml-auto hover:bg-orange-600"><a href="signup.php">Signup</a></button>
+            <a onclick="onToggleMenu()" class="md:hidden cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 open-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 close-icon hidden">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </a>
+        </div>
+    </nav>
+</header>
+
 
 
     <!-- Restaurant details -->
@@ -323,6 +325,63 @@
       </button>
     </div>
   </section>
+
+
+   <!-- menu  -->
+   <section class="py-6 px-4">
+        <div class="max-w-7xl mx-auto lg:px-0">
+
+            <!-- category name  -->
+            <div class="card rounded-lg border p-4 mb-4 bg-white shadow-lg flex flex-col md:flex-row gap-4 h-auto lg:h-32">
+                <div class="w-full md:w-1/3 lg:w-1/6 flex items-center justify-center md:justify-start">
+                    <img src="https://media.istockphoto.com/id/953810510/photo/green-salad-with-fresh-vegetables.jpg?s=612x612&w=0&k=20&c=OyC-xDuR4SUnY3CCnzXc1RAI12CxpLF0g-M8yQ_NeUs=" alt="salad image" class="h-24 md:h-20 lg:h-24 object-cover rounded md:w-full">
+                </div>
+                <div class="flex-1 flex flex-col justify-center text-center md:text-left">
+                    <div>
+                        <h5 class="text-xl md:text-3xl lg:text-4xl font-bold mb-2">Salad's</h5>
+                    </div>
+                </div>
+            </div>
+      
+            <!-- Menu Items for Snack n Bake -->
+            <div class="grid grid-cols-1 gap-4">
+                <div class="card rounded-lg border p-3 bg-white shadow-lg flex flex-col h-auto">
+
+                    <!-- Sample Item 1 -->
+                    <div class="card rounded-lg border p-3 bg-white shadow-lg flex flex-col h-auto">
+                        <div class="flex justify-between items-center mb-2">
+                            <h5 class="text-lg font-bold">Sample Item 1</h5>
+                            <div class="flex gap-2">
+                                <button class="decrement p-2 border rounded-full hover:bg-gray-200" onclick="decrementQuantity(this.nextElementSibling)">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-gray-900">
+                                        <path d="M4 8H12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <input type="text" value="0" class="quantity w-8 text-center border rounded-full bg-gray-100 text-sm">
+                                <button class="increment p-2 border rounded-full hover:bg-gray-200" onclick="incrementQuantity(this.previousElementSibling)">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-gray-900">
+                                        <path d="M8 4V12M4 8H12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-semibold text-sm">$8.99</span> <!-- Price display -->
+                            <button class="add-to-cart bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600 text-sm md:px-6 lg:px-8" onclick="addToCart('Sample Item 1', 8.99, parseInt(this.parentElement.previousElementSibling.querySelector('.quantity').value))">Add to Cart</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
 
 
   <footer class="bg-orange-500 text-white p-8">

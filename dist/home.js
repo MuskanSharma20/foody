@@ -17,36 +17,22 @@ function onToggleMenu() {
         closeIcon.classList.add('hidden');
     }
   }
-  
+ 
   //carousel
-
-const slides = [
-  {
-      url: 'https://images.unsplash.com/photo-1486427944299-d1955d23e34d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-      url: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-      url: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-      url: 'https://images.unsplash.com/photo-1615837197154-2e801f4bd294?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-  {
-      url: 'https://images.unsplash.com/photo-1619535860434-ba1d8fa12536?q=80&w=1796&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  },
-];
-
 let currentIndex = 0;
 
-const slider = document.getElementById('slider');
+const slides = document.querySelectorAll('.slide');
 const prevSlideButton = document.getElementById('prevSlide');
 const nextSlideButton = document.getElementById('nextSlide');
 const dotsContainer = document.getElementById('dots');
 
 const updateSlide = () => {
-    slider.style.backgroundImage = `url(${slides[currentIndex].url})`;
+    slides.forEach((slide, index) => {
+        slide.classList.add('opacity-0');
+        slide.classList.remove('opacity-100');
+    });
+    slides[currentIndex].classList.remove('opacity-0');
+    slides[currentIndex].classList.add('opacity-100');
     updateDots();
 };
 
@@ -68,14 +54,16 @@ const goToSlide = (slideIndex) => {
 const updateDots = () => {
     const dots = dotsContainer.children;
     for (let i = 0; i < dots.length; i++) {
-        dots[i].classList.remove('active');
+        dots[i].classList.remove('bg-black');
+        dots[i].classList.add('bg-gray-300');
     }
-    dots[currentIndex].classList.add('active');
+    dots[currentIndex].classList.add('bg-black');
+    dots[currentIndex].classList.remove('bg-gray-300');
 };
 
 slides.forEach((slide, slideIndex) => {
     const dot = document.createElement('div');
-    dot.className = 'text-2xl cursor-pointer';
+    dot.className = 'w-4 h-4 mx-1 rounded-full cursor-pointer bg-gray-300';
   
     dot.onclick = () => goToSlide(slideIndex);
     dotsContainer.appendChild(dot);
@@ -89,10 +77,10 @@ updateSlide();
 
 // Add automatic slide change
 setInterval(nextSlide, 5000); // 5000ms = 5s
- 
-  
 
-  
+
+
+
   
   // image slider
   document.addEventListener('DOMContentLoaded', function () {
